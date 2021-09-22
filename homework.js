@@ -19,6 +19,9 @@ const registerHomework = (titulo, estado) => {
 };
 
 const showHomeWords =()=>{
-    console.log(db)
+    db.forEach(function(tarea,i){
+        console.log(i+". titulo: "+tarea.titulo +" estado: "+tarea.estado);
+    })
+    
 }
 module.exports = { registerHomework, showHomeWords };
